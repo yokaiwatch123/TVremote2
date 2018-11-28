@@ -1,0 +1,72 @@
+public class TVremote
+{
+private double channel;
+private String name;
+private int volume;
+private String brand;
+
+TVremote(String newName) {
+ brand="SamSung";
+ channel = 2;
+ name = newName;
+ volume = 5;
+ 
+}
+TVremote() {
+ brand="SamSung";
+ channel = 2;
+ name = null;
+ volume = 5;
+ 
+}
+public String brandName() {
+ return brand;   
+    
+    
+}
+public void setName(String newName) {
+ name = newName;
+ System.out.println("enter your name:");   
+    
+}
+public String getName() {
+ if (name==null)
+     return "no name entered";
+ else  
+    return name;
+} 
+public void setChannel (double c) {
+ channel = c;   
+    
+}
+public double getChannel () {
+ return channel;
+
+}
+public void setVolume (int num ) {
+  volume = num;
+}
+public int getVolume () {
+ return volume;
+}
+}
+
+
+// lol
+// new class main 
+import java.util.Scanner;
+public class THEtv {
+public static void main (String [] args) { 
+ Scanner input = new Scanner(System.in);
+ TVremote ownr = new TVremote();
+ ownr.brandName();
+ ownr.getName();
+ 
+ ownr.getChannel();
+ input.nextDouble();
+ ownr.getVolume();
+ input.nextInt();
+ 
+ System.out.println(ownr);
+ }
+ }
